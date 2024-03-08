@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Course Outlines
+title: 𐙚˙✧˖°📷 ༘ ⋆｡ ˚
 image: /images/mario_animation.png
 hide: true
 ---
@@ -188,12 +188,54 @@ hide: true
   });
 
 </script>
-Investing in Your Technical Future
 
-Explore the Computer Science Pathway at Del Norte High School. All Del Norte CompSci classes are designed to provide a real-world development experience. Grading is focused on time invested, analytics, participation with peers, and engagement in learning.
+<center><span style="color:#584f5e;font-weight:700;font-size:30px">
+𐙚˙✧ Mya Madriaga ⋆｡ ˚
+</span></center>
 
-- Project-based learning with teacher support
-- Tech Talks by teacher complimented with Student Teaching
-- Course learning includes Coding Languages, DevOps, GitHub, Research and Creativity
-- Student teams practice Agile Development Methodologies: planning, communication, collaboration
-- Class lab time provided and approximately 2-3 hours of homework per week
+
+
+
+<span style="color:#b4e1f0;font-weight:700;font-size:19px">
+    i'm 15 years old, a sophomore and Filipino + African American!
+Some of my interests are: listening to music, sort of making music or paying a lot of attention to the rythym and beats of music, different mixed media art (I make keychains, etc), fashion, I don't currently play a sport, but I really wanted to try hula as well as archery!?
+</span>
+
+
+- I know how to (barely..) understand tagalog, I studied korean but kind of dropped it, and I study spanish here!
+
+<span style="color:#5a4f5e;font-weight:700;font-size:20px">
+            some games I really like are: 
+</span>
+
+
+<span style="color:#5a4f5e;font-weight:200;font-size:20px">
+Fortnite.. Borderlands, Zelda, Skyrim, and most of the basic nintendo ones 
+</span>
+
+im taking computer science because I wanted to major in it, while having my minor be fashion!
+I really want to create a steady future as far as my profession, So I believe that if I take computer science it will help me take a liking to it!
+
+𐙚˙✧˖°📷 ༘ ⋆｡ ˚
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<img src="{{site.baseurl}}/game/images/Get To Know Me Poster - Madriaga, Mya.png" alt="get to know me poster"/>
+</div>
+𐙚˙✧˖°📷 ༘ ⋆｡ ˚
+
+<span style="color:#5a4f5e;font-weight:700;font-size:20px">
+             some of my favorite artists: 
+</span>
+
+
+- Lamp,
+- The Cardigans,
+- Frank Ocean,
+- Sade,
+- Keyshia Cole,
+- Luis Miguel,
+- Rihanna,
+- SHISHAMO,
+- Beabadoobee,
+- Ichiko Aoba,
+- Dahlia,
+
