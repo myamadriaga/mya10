@@ -147,6 +147,20 @@ hide: true
       if (event.repeat) {
         mario.stopAnimate();
       } else {
+        mario.startCheering();
+      }
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      if (event.repeat) {
+        mario.stopAnimate();
+      } else {
+        mario.startFlipping();
+      }
+    } else if (event.key === "ArrowDown") {
+      event.preventDefault();
+      if (event.repeat) {
+        mario.stopAnimate();
+      } else {
         mario.startPuffing();
       }
     }
