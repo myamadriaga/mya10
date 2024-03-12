@@ -11,12 +11,12 @@ $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 
 html, body, input, textarea, select, button {   
-  color: #154a66!important;
-  background-color: #e0faff !important;
+  color: #4a3507!important;
+  background-color: #fcf0d4 !important;
 }
 
 a {
-    color: #154a66 !important;
+    color: #6e3f07 !important;
 }
 
 a:hover {
@@ -24,16 +24,16 @@ a:hover {
 }
 
 .site-title, .site-title:visited, .site-nav, .page-link {
-    color: #73c7f5 !important;
+    color: #4a3507 !important;
 }
 
 .site-nav {
-    background-color: #F4FAFC;
+    background-color: #6e3f07;
     border-color: $overlay-light;
 }
 
 * {
-    scrollbar-color: #F4FAFC $overlay-light;
+    scrollbar-color: #6e3f07 $overlay-light;
 }
 
 pre, code {
@@ -71,9 +71,9 @@ table th{
 }
 
 table td{
-    background-color: #F4FAFC;
-    border-color: $overlay-light;
-    color: $med-emph;
+    background-color: #f7cbe5;
+    border-color: #6e3f07;
+    color: #6e3f07;
 }
 
 .flash {
@@ -100,10 +100,10 @@ li .post-meta-description {
 }
 
 .search-result-highlight {
-    color:yellow !important;
+    color:#f28dc8 !important;
     font-weight:bold !important;
 }
 
 .search-results-list-item .search-result-title {
-    color: cornflowerblue !important;
+    color: #6e3f07 !important;
 }
