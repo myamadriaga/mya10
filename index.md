@@ -232,7 +232,7 @@ I really want to create a steady future as far as my profession, So I believe th
 
 𐙚˙✧˖°📷 ༘ ⋆｡ ˚
 <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-<img src="{{site.baseurl}}/game/images/Get To Know Me Poster - Madriaga, Mya.png" alt="get to know me poster"/>
+<img src="{{site.baseurl}}/images/snake/Get To Know Me Poster - Madriaga, Mya.png" alt="get to know me poster"/>
 </div>
 𐙚˙✧˖°📷 ༘ ⋆｡ ˚
 

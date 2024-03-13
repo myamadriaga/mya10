@@ -5,7 +5,7 @@ layout: post
 title: Classic Snake Game
 courses: {'csse': {'week': 0}}
 type: ccc
-permalink: /mya/navigation/csse
+permalink: mya/navigation/csse
 ---
 
 <main>

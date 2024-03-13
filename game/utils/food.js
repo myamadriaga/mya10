@@ -5,7 +5,7 @@ function Food()
 	this.y;
 	this.tileSize = 20;
 	let img = new Image();
-	img.src = "/mya10/game/images/apple.png";
+	img.src = "/images/snake/apple.png";
 	
 	this.getRandomPoint = function() {
 		let cols = Math.floor(gameCanvas.getWidth() / this.tileSize);
