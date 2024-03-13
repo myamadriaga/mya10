@@ -3,7 +3,7 @@ function GameCanvas()
 	const canvas = document.querySelector("canvas");
 	const pen = canvas.getContext("2d");
 	// let currColor = "#CEE2F2";
-	let currColor = "blue";
+	let currColor = "#fab1ee";
 	
 	this.setColor = function(color) {
 		currColor = color;

@@ -7,7 +7,7 @@ function FoodWinged()
 	this.velY;
 	this.tileSize = 20;
 	let img = new Image();
-	img.src = "/mya10/game/images/apple.png";
+	img.src = "{{site.baseurl}}/game/images/apple.png";
 	
 	this.init = function() {
 		let {x,y} = this.getRandomPoint();

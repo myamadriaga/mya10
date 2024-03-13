@@ -16,7 +16,7 @@ function MainGame1()
 		food.update();
 		food.draw();
 		this.initEventListeners();
-		document.querySelector("canvas").style.border = "20px light blue";
+		document.querySelector("canvas").style.border = "#fcf0d4";
 		
 		animationID = window.setInterval(this.gameLoop.bind(this), 100);
 		gameSound.play("bgSound");

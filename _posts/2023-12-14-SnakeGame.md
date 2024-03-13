@@ -5,7 +5,7 @@ layout: post
 title: Classic Snake Game
 courses: {'csse': {'week': 0}}
 type: ccc
-permalink: /mya/navigation/csse
+permalink: /navigation/csse
 ---
 
 <main>
@@ -95,10 +95,6 @@ permalink: /mya/navigation/csse
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=PT+Sans&family=Roboto:wght@400;700&display=swap');
 
 :root
-{
-	--theme: #BCD5EA;
-	--theme-light: ##CEE2F2;
-}
 
 *=
 {
@@ -109,15 +105,15 @@ permalink: /mya/navigation/csse
 }
 
 body {
-    background-color: #e1f3fa;
+    background-color: #fab1ee;
     }
 
 header
 {
 	display: flex;
 	padding: 20px;
-	background-color: var(--theme);
-	color: white;
+	background-color: #fab1ee;
+	color: #6e3f07;
 }
 
 header #home
@@ -126,7 +122,7 @@ header #home
 	display: inline-block;
 	font-size: 20px;
 	cursor: pointer;
-	color: white;
+	color: #6e3f07;
 	text-decoration: none;
 	border-radius: 3px;
 	line-height: 40px;
@@ -183,7 +179,7 @@ header h1
 	width: 300px;
 	height: 150px;
 	text-align: center;
-	background-color: white;
+	background-color: #6e3f07;
 	box-shadow: 2px 2px 4px gray;
 }
 
@@ -231,7 +227,7 @@ canvas
 {
 	display: block;
 	margin: auto;
-	border: 5px solid var(--theme);
-	background: url("{{site.baseurl}}/images/board.png");
+	border: 5px solid #6e3f07;
+	background: url("{{site.baseurl}}/game/images/board.png");
 }
     </style>
