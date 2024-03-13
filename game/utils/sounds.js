@@ -2,9 +2,9 @@ function GameSound()
 {
 	let foodEat;
 	this.init = function() {
-		bgSound = new Audio("{{site.baseurl}}/game/sounds/bg-sound.mp3")
-		foodEat = new Audio("/game/sounds/oh-my-gah.mp3");
-		wallHit = new Audio("{{site.baseurl}}/game/sounds/wall-hit.wav");
+		bgSound = new Audio("/mya10/game/sounds/bg-sound.mp3")
+		foodEat = new Audio("/mya10/game/sounds/oh-my-gah.mp3");
+		wallHit = new Audio("/mya10/game/sounds/wall-hit.wav");
 		bgSound.loop = true;
 		bgSound.volume = 0.5;
 	};
