@@ -3,7 +3,7 @@ description: "a blog made by Mya M!"
 owner_name: Mya Madriaga
 github_username: myamadriaga
 github_repo: "mya10"
-baseurl: "/mya"
+baseurl: "/mya10"
 future: true
 remote_theme: jekyll/minima
 minima:

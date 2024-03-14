@@ -5,7 +5,7 @@ layout: post
 title: Classic Snake Game
 courses: {'csse': {'week': 0}}
 type: ccc
-permalink: mya/navigation/csse
+permalink: m/navigation/csse
 ---
 
 <main>
@@ -228,6 +228,6 @@ canvas
 	display: block;
 	margin: auto;
 	border: 5px solid #6e3f07;
-	background: url("{{site.baseurl}}/game/images/board.png");
+	background: url("{{site.baseurl}}/images/snake/board.png");
 }
     </style>
