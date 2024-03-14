@@ -1,16 +1,16 @@
 ---
-toc: true
+toc: false
 comments: false
 layout: post
-title: sprite sheet MAIN
-description: 
-type: tangibles
-courses: { compsci: {week: 6} }
+title: sprite sheet yuuji
+courses: {'csse': {'week': 0}}
+type: ccc
+permalink: m/navigation/csse
 ---
 <body>
     <div>
         <canvas id="spriteContainer"> <!-- Within the base div is a canvas. An HTML canvas is used only for graphics. It allows the user to access some basic functions related to the image created on the canvas (including animation) -->
-            <img id="dogSprite" src="/Mya2/images/yuuji.png">  // change sprite here
+            <img id="dogSprite" src="/mya10/images/snake/yuuji.png">  // change sprite here
         </canvas>
         <div id="controls"> <!--basic radio buttons which can be used to check whether each individual animaiton works -->
             <input type="radio" name="animation" id="punch 1" checked>

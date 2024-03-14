@@ -253,3 +253,7 @@ I really want to create a steady future as far as my profession, So I believe th
 - Ichiko Aoba,
 - Dahlia,
 
+<audio controls autoplay preload="auto">
+        <source src="/mya10/assets/paudio/apt.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
