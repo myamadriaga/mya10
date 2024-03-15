@@ -11,7 +11,7 @@ $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 
 html, body, input, textarea, select, button {   
-  color: #4a3507!important;
+  color: #6e3f07!important;
   background-color: #fcf0d4 !important;
 }
 
@@ -33,7 +33,7 @@ a:hover {
 }
 
 * {
-    scrollbar-color: #6e3f07 $overlay-light;
+    scrollbar-color: #6e3f07 #f7cbe5;
 }
 
 pre, code {

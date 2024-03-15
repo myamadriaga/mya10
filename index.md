@@ -5,6 +5,36 @@ image: /images/mario_animation.png
 hide: true
 ---
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button id="playButton">music!</button>
+    <audio id="backgroundMusic" autoplay>
+        <source src="{{site.baseurl}}/assets/paudio/apt.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        var audio = document.getElementById("backgroundMusic");
+        var playButton = document.getElementById("playButton");
+        playButton.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.innerHTML = "Pause Music";
+            } else {
+                audio.pause();
+                playButton.innerHTML = "Play Music";
+            }
+        });
+   
+
+
+
+
+
+</script>
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -225,6 +255,8 @@ Some of my interests are: listening to music, sort of making music or paying a l
 Fortnite.. Borderlands, Final Fantasy, Skyrim, Resident Evil.. 
 </span>
 
+
+
 <span style="color:#6e3f07;">
 im taking computer science because I wanted to major in it, while having my minor be fashion!
 I really want to create a steady future as far as my profession, So I believe that if I take computer science it will help me take a liking to it! 
@@ -252,8 +284,3 @@ I really want to create a steady future as far as my profession, So I believe th
 - Beabadoobee,
 - Ichiko Aoba,
 - Dahlia,
-
-<audio controls autoplay preload="auto">
-        <source src="/mya10/assets/paudio/apt.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
