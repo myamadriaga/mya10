@@ -7,7 +7,7 @@ courses: { csse: {week: 13} }
 image: /images/platformer/backgrounds/home.png
 ---
 
-<!-- Syle is now located, as of Jan 2024 v2.0, in _sass/minima/dracula/platformer-styles.scss -->
+<!-- Style is now located, as of Jan 2024 v2.0, in _sass/minima/dracula/platformer-styles.scss -->
 
 <!-- DOM Settings Panel (sidebar id and div), managed by SettingsContro.js -->
 <div id="sidebar" class="sidebar">
@@ -31,7 +31,9 @@ image: /images/platformer/backgrounds/home.png
   
   <!--Audio for coin collection -->
   <audio id ="coin" src="{{site.baseurl}}/assets/audio/coin.mp3" preload="auto"></audio>
-  
+
+  <!--audio id for background music-->
+  <audio id ="apartment" src="{{site.baseurl}}/assets/paudio/apt.mp3" preload="auto"></audio>
   
   <!-- Wrap both the controls and gameplay in a container div -->
   <div id="canvasContainer">

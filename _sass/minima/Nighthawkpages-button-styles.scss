@@ -4,8 +4,8 @@
     width: auto;
     height: auto;
     border-radius: 10px;
-    background-color: #21807c;
-    border: 3px solid black;
+    background-color: #4f2e06;
+    border: 3px solid #f28dc8;
     font-size: 1.5em;
 
     display: flex;
@@ -74,12 +74,12 @@
   /* styling for the calculator clear button */
   .calculator-clear {
     @extend .button;
-    background-color: #e68b1c;
+    background-color: #fccce8;
   }
   
   /* styling for the calculator equals button */
   .calculator-equals {
     @extend .button;
-    background-color: #e70f0f;
+    background-color: #fccce8;
   }
 

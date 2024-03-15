@@ -1,12 +1,13 @@
 ---
-toc: true
+toc: false
 comments: false
 layout: post
-title: Calculator!
-description: purple calculator that plays pinkpanthress when you press the plus button...
-type: tangibles
-courses: { compsci: {week: 5} }
+title: calculator!
+courses: {'csse': {'week': 0}}
+type: ccc
+permalink: calculator/navigation/csse
 ---
+<center> press the plus button to hear pinkpanthress! </center>
 
 <style>
   .calculator-output {
@@ -66,7 +67,6 @@ courses: { compsci: {week: 5} }
 
 <!-- JavaScript (JS) implementation of the calculator. -->
 <script>
-
 var bgSound = new Audio("{{site.baseurl}}/assets/pinkpantheress-just-for-me-official-audio-(mp3convert.org).mp3")
 bgSound.loop = true;
 		bgSound.volume = 0.5;

@@ -39,18 +39,3 @@ introduction_tools: &introduction_tools |
     | GitHub Pages    |
     | Showcase Project|
     +-----------------+
-
-# CSSE course meta data
-Sprint1:
-  title: Personalized Time Box! 
-  description: a time box full of previous/ongoing projects made by me. 
-  start: 0
-  end: 3
-Sprint2:
-  title: tb 2 
-  end: 6
-Sprint3:
-  title: tb 3
-  start: 7
-  end: 12
-

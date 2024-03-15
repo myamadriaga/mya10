@@ -28,7 +28,7 @@ hide: true
                 playButton.innerHTML = "Play Music";
             }
         });
-   
+   </script>
 
 
 
