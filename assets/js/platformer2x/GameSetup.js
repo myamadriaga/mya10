@@ -17,6 +17,7 @@ import FlyingGoomba from './FlyingGoomba.js';
 import BlockPlatform from './BlockPlatform.js';
 import Mushroom from './Mushroom.js';
 import Coin from './Coin.js';
+import chocHills from './BackgroundChoc.js';
 
 
 /* Coding Style Notes
@@ -200,7 +201,7 @@ const GameSetup = {
         complete: { src: "/images/platformer/backgrounds/OneStar.png" },
         complete2: { src: "/images/platformer/backgrounds/TwoStar.png" },
         end: { src: "/images/platformer/backgrounds/Congratulations!!!.png" },
-        chocolate: { src: "/images/platformer/chocolate.jpg"}
+        chocolate: { src: "/images/platformer/backgrounds/abstract - grow green.png"}
       },
       players: {
         mario: {
@@ -267,7 +268,14 @@ const GameSetup = {
           width: 200,
           height: 180,
         },
-      }
+        Snoopy: {
+          src: "/images/platformer/sprites/Snoopy.jpg",
+          width: 448,
+          height: 452,
+          scaleSize: 60,
+          speedRatio: 0.7,
+          xPercentage: 0.6,
+      },
     },
 
     /*  ==========================================
@@ -345,7 +353,7 @@ const GameSetup = {
         // Hills Game Level defintion...
         const hillsGameObjects = [
         // GameObject(s), the order is important to z-index...
-        { name: 'mountains', id: 'background', class: BackgroundMountains,  data: this.assets.backgrounds.mountains },
+        { name: 'mountains', id: 'mountains', class: BackgroundMountains,  data: this.assets.backgrounds.mountains},
         { name: 'clouds', id: 'background', class: BackgroundClouds, data: this.assets.backgrounds.clouds },
         { name: 'hills', id: 'background', class: BackgroundHills, data: this.assets.backgrounds.hills },
         { name: 'grass', id: 'platform', class: Platform, data: this.assets.platforms.grass },
@@ -373,7 +381,7 @@ const GameSetup = {
         // Avenida Game Level definition...
         const avenidaGameObjects = [
         // GameObject(s), the order is important to z-index...
-        { name: 'avenida', id: 'background', class: Background, data: this.assets.backgrounds.avenida },
+        { name: 'chocolate', id: 'background', class: BackgroundMountains, data: this.assets.backgrounds.chocolate },
         { name: 'grass', id: 'platform', class: Platform, data: this.assets.platforms.grass },
         { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.block, xPercentage: 0.2, yPercentage: 0.85 },
         { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.block, xPercentage: 0.2368, yPercentage: 0.85 },
