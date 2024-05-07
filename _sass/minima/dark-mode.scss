@@ -1,3 +1,5 @@
+
+
 :root {
     --default-canvas-filter: invert(100%);
 }
@@ -9,10 +11,17 @@ $dark-grey : #121212;
 // $dark-grey : #1F1B24;
 $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
+$image-url: '{{site.baseurl}}/images/background.jpg';
 
-html, body, input, textarea, select, button {   
+
+div.wrapper {
+    background-image: url('{{site.baseurl}}/images/background.jpg') !important;
+    background-size: cover; // Adjust as needed
+    background-position: center;
+}
+
+html, input, textarea, select, button {   
   color: #6e3f07!important;
-  background-color: #fcf0d4 !important;
 }
 
 a {

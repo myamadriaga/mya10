@@ -212,7 +212,7 @@ hide: true
 
 
 <span style="color:#fab1ee;font-weight:700;font-size:18px">
-    i'm 15 years old, a sophomore and Filipino + African American!
+    i'm 16, a sophomore and Filipino + African American!
 Some of my interests are: listening to music, sort of making music or paying a lot of attention to the rythym and beats of music, different mixed media art (I make keychains, etc), and fashion
 </span>
 
@@ -256,21 +256,39 @@ I really want to create a steady future as far as my profession, So I believe th
 - Ichiko Aoba,
 - Dahlia,
 
-<audio id="backgroundMusic" autoplay loop muted>
-  <source src="{{site.baseurl}}/assets/paudio/mtwii.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 <script>
-// Function to unmute and play background music on user interaction
-function playBackgroundMusic() {
-    var audio = document.getElementById('backgroundMusic');
-    audio.muted = false; // unmute
+// Function to play a sound effect
+function playSoundEffect() {
+    var audio = new Audio('{{site.baseurl}}/assets/paudio/hbwii.mp3'); // replace 'your_sound_effect.mp3' with the path to your sound effect file
     audio.play();
 }
 
-// Listen for a user click to unmute and play background music
-document.addEventListener('click', function() {
-    playBackgroundMusic();
+// Attach click event listener to document
+document.addEventListener('click', function(event) {
+    // Check if the clicked element is an anchor link (<a>)
+    if (event.target.tagName === 'A') {
+        playSoundEffect(); // Play the sound effect
+    } else {
+        playAudio(); // If the clicked element is not an anchor link, play the background audio
+    }
 });
+
+var audio = new Audio('{{site.baseurl}}/assets/paudio/mewoo.mp3'); // replace 'your_audio_file.mp3' with the path to your audio file
+audio.loop = true; // enable looping
+
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) { // Check if the pressed key is Enter (key code 13)
+        playAudio();
+    }
+});
+
+function playAudio() {
+    if (!audio.paused) { // Check if audio is currently playing
+        audio.pause(); // Pause the audio if it's already playing
+    } else {
+        audio.currentTime = 0; // Reset audio to start
+        audio.play(); // Play the audio if it's not already playing
+    }
+}
 </script>
