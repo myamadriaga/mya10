@@ -5,36 +5,7 @@ image: /images/mario_animation.png
 hide: true
 ---
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <button id="playButton">music!</button>
-    <audio id="backgroundMusic" autoplay>
-        <source src="{{site.baseurl}}/assets/paudio/apt.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-        var audio = document.getElementById("backgroundMusic");
-        var playButton = document.getElementById("playButton");
-        playButton.addEventListener("click", function() {
-            if (audio.paused) {
-                audio.play();
-                playButton.innerHTML = "Pause Music";
-            } else {
-                audio.pause();
-                playButton.innerHTML = "Play Music";
-            }
-        });
-   </script>
 
-
-
-
-
-</script>
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -284,3 +255,22 @@ I really want to create a steady future as far as my profession, So I believe th
 - Beabadoobee,
 - Ichiko Aoba,
 - Dahlia,
+
+<audio id="backgroundMusic" autoplay loop muted>
+  <source src="{{site.baseurl}}/assets/paudio/mtwii.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+// Function to unmute and play background music on user interaction
+function playBackgroundMusic() {
+    var audio = document.getElementById('backgroundMusic');
+    audio.muted = false; // unmute
+    audio.play();
+}
+
+// Listen for a user click to unmute and play background music
+document.addEventListener('click', function() {
+    playBackgroundMusic();
+});
+</script>
