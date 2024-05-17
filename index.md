@@ -204,58 +204,72 @@ hide: true
 
 </script>
 
-<center><span style="color:#6e3f07;font-weight:700;font-size:30px">
-𐙚˙✧ Mya Madriaga ⋆｡ ˚
-</span></center>
+
+<span style="font-style: italic;">
+welcome to my blog! <br> click enter to hear music on each page :P
+</span>
 
 
 
 
-<span style="color:#fab1ee;font-weight:700;font-size:18px">
-    i'm 16, a sophomore and Filipino + African American!
-Some of my interests are: listening to music, sort of making music or paying a lot of attention to the rythym and beats of music, different mixed media art (I make keychains, etc), and fashion
+<div class="container">
+
+<hr>
+
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px; max-width:6%; float: left; border-color: #000000; ">
+<img src="{{site.baseurl}}/images/personpfp.jpg"  alt="pfp"/> 
+</div> 
+
+<a href="{{site.baseurl}}/navigation/csp"><span style="color: #5f6163; font-weight:300; font-size:16px;"> MYAH! </span></a>
+
+
+<hr style="float:left;">
+
+<br>
+<hr>
+
+
+<span style="background-color: #c9deff; color: #5f6163; font-weight:700; font-size:30px;">
+𐙚˙✧ ⋆｡ ˚
+</span>
+
+
+
+
+<span style="color:#c9deff;font-weight:700;font-size:18px">
+    
 </span>
 
 
 <center> <span style="color:#6e3f07;font-weight:700;font-size:20px">
-            some games I really like are: 
+            
 </span> </center>
 
 
 <span style="color:#fab1ee;font-weight:500;font-size:18px">
-Fortnite.. Borderlands, Final Fantasy, Skyrim, Resident Evil.. 
+
 </span>
 
 
 
 <span style="color:#6e3f07;">
-im taking computer science because I wanted to major in it, while having my minor be fashion!
-I really want to create a steady future as far as my profession, So I believe that if I take computer science it will help me take a liking to it! 
+
 </span>
 
-𐙚˙✧˖°📷 ༘ ⋆｡ ˚
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-<img src="{{site.baseurl}}/images/snake/Get To Know Me Poster - Madriaga, Mya.png" alt="get to know me poster"/>
+
+<center>
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px; max-width: 70%">
+<img src="{{site.baseurl}}/images/snake/Get To Know Me Poster - Madriaga, Mya.png"  alt="get to know me poster"/>
 </div>
-𐙚˙✧˖°📷 ༘ ⋆｡ ˚
+</center>
 
 <span style="color:#5a4f5e;font-weight:700;font-size:20px">
-             some of my favorite artists: 
+             
 </span>
 
+<br><br><br>
 
-- Lamp,
-- The Cardigans,
-- Frank Ocean,
-- Sade,
-- Keyshia Cole,
-- Luis Miguel,
-- Rihanna,
-- SHISHAMO,
-- Beabadoobee,
-- Ichiko Aoba,
-- Dahlia,
-
+</div>
 
 <script>
 // Function to play a sound effect
@@ -266,11 +280,11 @@ function playSoundEffect() {
 
 // Attach click event listener to document
 document.addEventListener('click', function(event) {
-    // Check if the clicked element is an anchor link (<a>)
-    if (event.target.tagName === 'A') {
+    // Check if the clicked element is an anchor link (<a>) or any other clickable element
+    if (event.target.tagName === 'A' || event.target.classList.contains('clickable-element')) {
         playSoundEffect(); // Play the sound effect
     } else {
-        playAudio(); // If the clicked element is not an anchor link, play the background audio
+        playAudio(); // If the clicked element is not a clickable element, play the background audio
     }
 });
 
@@ -292,3 +306,4 @@ function playAudio() {
     }
 }
 </script>
+

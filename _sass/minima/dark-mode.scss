@@ -13,10 +13,17 @@ $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 $image-url: '{{site.baseurl}}/images/background.jpg';
 
+.container {
+    background-color:aliceblue;
+}
 
-div.wrapper {
-    background-image: url('{{site.baseurl}}/images/background.jpg') !important;
-    background-size: cover; // Adjust as needed
+div.trigger {
+    background-color: transparent;
+}
+
+body {
+    background-image: url('/mya10/images/background.jpg') !important;
+    background-size: 100%; // Adjust as needed
     background-position: center;
 }
 
@@ -25,24 +32,28 @@ html, input, textarea, select, button {
 }
 
 a {
-    color: #6e3f07 !important;
+    color: #5074ae!important;
 }
 
 a:hover {
     color:$high-emph !important;
 }
-
-.site-title, .site-title:visited, .site-nav, .page-link {
-    color: #4a3507 !important;
+ .site-title:visited, .site-nav, .page-link {
+    color: rgba(33, 35, 35, 0.267) !important;
 }
 
+.site-title {
+    color: #000000;
+    font-weight: bold;
+    font-style: italic;
+}
 .site-nav {
-    background-color: #6e3f07;
+    background-color: #FFFFFF;
     border-color: $overlay-light;
 }
 
 * {
-    scrollbar-color: #6e3f07 #f7cbe5;
+    scrollbar-color: #dddad6 #4a4548;
 }
 
 pre, code {
@@ -61,6 +72,7 @@ pre, code {
 
 .post-content p, .post-content li {
     color: $med-emph;
+    background-color: #FFFFFF;
 }
 
 .btn {
@@ -80,8 +92,8 @@ table th{
 }
 
 table td{
-    background-color: #f7cbe5;
-    border-color: #6e3f07;
+    background-color: #c9deff;
+    border-color: #3675d9;
     color: #6e3f07;
 }
 
@@ -111,5 +123,9 @@ li .post-meta-description {
 }
 
 .search-results-list-item .search-result-title {
-    color: #6e3f07 !important;
+    color: #000000 !important;
+}
+
+a.post-link {
+    color: #c9deff;
 }
