@@ -5,9 +5,184 @@ search_exclude: true
 course: csse
 ---
 
+# Javascript Objects, + How they are collected: 
 
-# Articulation Blog: 
+JavaScript objects are collections of key-value pairs, where keys (also called properties) are strings (or symbols), and values can be any data type, including other objects, arrays, or functions. Objects in JavaScript are used to store and organize data, and they can be created using curly braces {} or the new Object() syntax.
 
+To collect data in an object, you define keys and assign corresponding values.
+
+example: 
+
+```js
+let character {
+    name: "Smiski"
+    isCollectable: true;
+},
+greet: function() {
+    console.log("wuts up! my name is " + this.name);
+};
+```
+<hr>
+
+
+Each property is a key-value pair, where they key is a string and the value can be a variety of data types. 
+
+# Javascript Objects and the Game Level: 
+
+Javascript objects can represent different elements, like the player, enemies, or obstacles; which are collected into a bigger structure to interact with them easily.
+
+ex: Each javascript object in the game has its main file, such as enemy.js, etc; all of those will state the purpose of those objects. Those objects are then connected to GameSetup to be compiled into the levels. 
+
+- JS files define the object with properties and methods
+- GameSetup collects those objects into arrays to manage the game levle
+- There is an object that manages interactions and updates the game elements 
+
+# GameLevel and Array of Gamelevels 
+
+- Objects are defined for a single level, then those levels are collected into an array, such as this: 
+
+
+
+```js
+let gameLevels = [level1, level2];
+```
+
+this allows management between multiple levels, along with interactions with each level. These steps help organize the code. 
+
+# Conditional Statements:
+
+Conditional statements: ('if', 'else if' or 'else') allow the game to make decisions based on certain conditions, for example an if else statement for the theme toggle, or an if else statement for the fun fact toggle: 
+
+
+```js
+ const islightMode = document.createElement("input");  // get user defined lightmode boolean
+        islightMode.type = "checkbox";
+        if (GameEnv.isLightMode) {
+            enableLightMode();
+            islightMode.checked = true;
+        } else {
+            enableDarkMode();
+            islightMode.checked = false;
+        }
+```
+
+
+# Loop Statements: ('for, 'while' and 'forEach')
+
+- used to repeat actions, like moving enemies or checking for collisions for several game elements 
+
+example: 
+
+
+```js
+// Loop through all items to check for collection
+for (let i = 0; i < items.length; i++) {
+    let item = items[i];
+    if (player.position.x === item.position.x && player.position.y === item.position.y) {
+        if (item.name === "Strawberry") {
+            player.health += 20;  // Apply the effect of the strawberry
+            console.log("Player collected a strawberry! Health is now " + player.health);
+        } else if (item.name === "Health Potion") {
+            player.health += 50;  // Apply the effect of the health potion
+            console.log("Player collected a health potion! Health is now " + player.health);
+        }
+```
+
+- 'for' loop looks through all items to check if the players position matches any items position; collected item --> effect applied. 
+
+# Conditional and Loop Statements: 
+
+- manage game logic, allows checking of items in real time 
+
+so, if the player interacts with any object at any given time, there is a conditional statement for that specific interaction. 
+
+within GameControl, the game level is affected by a lot of code, such as this code:
+
+
+```js
+ updateCoinDisplay() {
+        const coins = GameEnv.coinScore
+        const coinDisplay = document.getElementById('coinScore')
+        if (!coinDisplay) {
+            console.error("COIN DISPLAY DOES NOT EXIST");
+        }
+        coinDisplay.textContent = coins
+    },     
+```
+
+where it updates the coin display and tracks it when collected; as well as this code 
+
+
+```js
+startRandomEvent() {
+        this.randomEventState = 1;
+        this.randomEventId = Math.floor(Math.random() * 3) + 1; //The number multiplied by Math.random() is the number of possible events.
+        /**Random Event Key
+         * 1: Inverts the Color of the Background
+         * 2: Time Stops all Goombas    
+         * 3: Kills a Random Goomba
+        */
+    },
+
+    endRandomEvent() {
+        this.randomEventId = 0;
+    },
+```
+
+the trigger of random events which is an example of a conditional statement 
+
+# Use of GameLoop
+
+```js
+  /**
+     * The main game control loop.
+     * Checks if the game is in transition. If it's not, it updates the game environment,
+     * checks if the current level is complete, and if it is, transitions to the next level.
+     * If the current level is null, it transitions to the beginning of the game.
+     * Finally, it calls itself again using requestAnimationFrame to create a loop.
+     */    
+    gameLoop() {
+        // Turn game loop off during transitions
+        if (!this.inTransition)
+    }
+```
+
+# Level Ending Indication
+
+
+```js
+/**
+     * Transitions to a new level. Destroys the current level and loads the new level.
+     * @param {Object} newLevel - The new level to transition to.
+     */
+    async transitionToLevel(newLevel) {
+        this.inTransition = true;
+
+        // Destroy existing game objects
+        GameEnv.destroy();
+
+        // Load GameLevel objects
+        if (GameEnv.currentLevel !== newLevel) {
+            GameEnv.claimedCoinIds = [];
+        }
+        await newLevel.load();
+        GameEnv.currentLevel = newLevel;
+
+        // Update invert property
+        GameEnv.setInvert();
+        
+        // Trigger a resize to redraw canvas elements
+        window.dispatchEvent(new Event('resize'));
+
+        this.inTransition = false;
+    },
+```
+
+this is the code that plays after the indication of the end of a level. It is triggered after the player hits a certain part of the game (which is known as the pipe.)
+<hr>
+
+
+# Finite State Machines
 <hr>
 <span style= "background-color: #FFFFFF;">
 Example of the Functions for Spam Musubi:
@@ -120,197 +295,4 @@ import { LightMode, DarkMode } from './Document.js';
 ```
 <hr>
 <hr>
-<div class="container">
-<div style= "background-color: #FFFFFF color: #000000">
-# Javascript Objects, + How they are collected: 
-
-JavaScript objects are collections of key-value pairs, where keys (also called properties) are strings (or symbols), and values can be any data type, including other objects, arrays, or functions. Objects in JavaScript are used to store and organize data, and they can be created using curly braces {} or the new Object() syntax.
-
-To collect data in an object, you define keys and assign corresponding values.
-
-example: 
-</div>
-
-```js
-let character {
-    name: "Smiski"
-    isCollectable: true;
-},
-greet: function() {
-    console.log("wuts up! my name is " + this.name);
-};
-```
-<hr>
-<div class="container">
-<div style= "background-color: #FFFFFF color: #000000">
-
-Each property is a key-value pair, where they key is a string and the value can be a variety of data types. 
-
-# Javascript Objects and the Game Level: 
-
-Javascript objects can represent different elements, like the player, enemies, or obstacles; which are collected into a bigger structure to interact with them easily.
-
-ex: Each javascript object in the game has its main file, such as enemy.js, etc; all of those will state the purpose of those objects. Those objects are then connected to GameSetup to be compiled into the levels. 
-
-- JS files define the object with properties and methods
-- GameSetup collects those objects into arrays to manage the game levle
-- There is an object that manages interactions and updates the game elements 
-
-# GameLevel and Array of Gamelevels 
-
-- Objects are defined for a single level, then those levels are collected into an array, such as this: 
-
-</div>
-
-```js
-let gameLevels = [level1, level2];
-```
-<div class="container">
-this allows management between multiple levels, along with interactions with each level. These steps help organize the code. 
-
-# Conditional Statements:
-
-Conditional statements: ('if', 'else if' or 'else') allow the game to make decisions based on certain conditions, for example an if else statement for the theme toggle, or an if else statement for the fun fact toggle: 
-</div>
-
-```js
- const islightMode = document.createElement("input");  // get user defined lightmode boolean
-        islightMode.type = "checkbox";
-        if (GameEnv.isLightMode) {
-            enableLightMode();
-            islightMode.checked = true;
-        } else {
-            enableDarkMode();
-            islightMode.checked = false;
-        }
-```
-
-<div class="container">
-# Loop Statements: ('for, 'while' and 'forEach')
-
-- used to repeat actions, like moving enemies or checking for collisions for several game elements 
-
-example: 
-</div>
-
-```js
-// Loop through all items to check for collection
-for (let i = 0; i < items.length; i++) {
-    let item = items[i];
-    if (player.position.x === item.position.x && player.position.y === item.position.y) {
-        if (item.name === "Strawberry") {
-            player.health += 20;  // Apply the effect of the strawberry
-            console.log("Player collected a strawberry! Health is now " + player.health);
-        } else if (item.name === "Health Potion") {
-            player.health += 50;  // Apply the effect of the health potion
-            console.log("Player collected a health potion! Health is now " + player.health);
-        }
-```
-<div class="container">
-- 'for' loop looks through all items to check if the players position matches any items position; collected item --> effect applied. 
-
-# Conditional and Loop Statements: 
-
-- manage game logic, allows checking of items in real time 
-
-so, if the player interacts with any object at any given time, there is a conditional statement for that specific interaction. 
-
-within GameControl, the game level is affected by a lot of code, such as this code:
-</div>
-
-```js
- updateCoinDisplay() {
-        const coins = GameEnv.coinScore
-        const coinDisplay = document.getElementById('coinScore')
-        if (!coinDisplay) {
-            console.error("COIN DISPLAY DOES NOT EXIST");
-        }
-        coinDisplay.textContent = coins
-    },     
-```
-<div class="container">
-where it updates the coin display and tracks it when collected; as well as this code 
-</div>
-
-```js
-startRandomEvent() {
-        this.randomEventState = 1;
-        this.randomEventId = Math.floor(Math.random() * 3) + 1; //The number multiplied by Math.random() is the number of possible events.
-        /**Random Event Key
-         * 1: Inverts the Color of the Background
-         * 2: Time Stops all Goombas    
-         * 3: Kills a Random Goomba
-        */
-    },
-
-    endRandomEvent() {
-        this.randomEventId = 0;
-    },
-```
-<div class="container">
-the trigger of random events which is an example of a conditional statement 
-
-# Use of GameLoop
-</div>
-
-
-```js
-  /**
-     * The main game control loop.
-     * Checks if the game is in transition. If it's not, it updates the game environment,
-     * checks if the current level is complete, and if it is, transitions to the next level.
-     * If the current level is null, it transitions to the beginning of the game.
-     * Finally, it calls itself again using requestAnimationFrame to create a loop.
-     */    
-    gameLoop() {
-        // Turn game loop off during transitions
-        if (!this.inTransition)
-    }
-```
-
-<div class="container">
-
-# Level Ending Indication
-
-</div>
-
-
-```js
-/**
-     * Transitions to a new level. Destroys the current level and loads the new level.
-     * @param {Object} newLevel - The new level to transition to.
-     */
-    async transitionToLevel(newLevel) {
-        this.inTransition = true;
-
-        // Destroy existing game objects
-        GameEnv.destroy();
-
-        // Load GameLevel objects
-        if (GameEnv.currentLevel !== newLevel) {
-            GameEnv.claimedCoinIds = [];
-        }
-        await newLevel.load();
-        GameEnv.currentLevel = newLevel;
-
-        // Update invert property
-        GameEnv.setInvert();
-        
-        // Trigger a resize to redraw canvas elements
-        window.dispatchEvent(new Event('resize'));
-
-        this.inTransition = false;
-    },
-```
-<div class="container">
-
-this is the code that plays after the indication of the end of a level. It is triggered after the player hits a certain part of the game (which is known as the pipe.)
-
-</div>
-
-
-
-
-
-
 
