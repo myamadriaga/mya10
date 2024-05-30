@@ -179,6 +179,15 @@ the trigger of random events which is an example of a conditional statement
 ```
 
 this is the code that plays after the indication of the end of a level. It is triggered after the player hits a certain part of the game (which is known as the pipe.)
+
+# Draw.io Example: 
+I did this example more pertaining to objects that I experimented with, so this is an object that I never finalized in the game but I did have success making. I think I didn't want to implement it because I also wanted to focus on multiplayer functions;
+
+<img src="{{site.baseurl}}/images/ArticulationBlog.jpg"  alt="draw.io"/>
+
+
+
+
 <hr>
 
 
