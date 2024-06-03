@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Music Reccomendations 
+title: Music Recommendations 
 units: "1,2,3,4,5,6,7,8,9"
 search_exclude: true
 course: csse

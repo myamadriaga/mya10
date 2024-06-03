@@ -183,10 +183,12 @@ this is the code that plays after the indication of the end of a level. It is tr
 # Draw.io Example: 
 I did this example more pertaining to objects that I experimented with, so this is an object that I never finalized in the game but I did have success making. I think I didn't want to implement it because I also wanted to focus on multiplayer functions;
 
-<img src="{{site.baseurl}}/images/ArticulationBlog.jpg"  alt="draw.io"/>
+<img src="{{site.baseurl}}/images/2articulationblog.drawio (1).png"  alt="draw.io"/>
 
 
 
+
+i think that a lot of my job had to do with fixing and finalizing objects that already existed, but I also wanted to learn from the code so I experimented with things and only really worked on 2 main projects. 
 
 <hr>
 
